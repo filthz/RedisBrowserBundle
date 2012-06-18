@@ -1,0 +1,11 @@
+<h2> {{ key }}</h2>
+
+<ul class="alt">
+    {% for value in values %}
+    <li class="{{ cycle(['odd', 'even'], loop.index) }}">
+        <div>
+            <code>{{ value }}</code>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

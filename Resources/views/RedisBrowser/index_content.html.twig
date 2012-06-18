@@ -1,0 +1,36 @@
+<div id="tabs">
+    <ul>
+        {% for client in clients %}
+        <li><a href="#tabs-{{ loop.index }}">Client {{ loop.index }}</a></li>
+        {% endfor %}
+    </ul>
+
+    {% set clientid = 0 %}
+    {% for client in clients %}
+        {% set keys = client.keys("*") %}
+        <div id="tabs-{{ loop.index }}">
+            <h2>Client {{ loop.index }}</h2>
+            <ul class="alt">
+                {% for key in keys %}
+                <li class="{{ cycle(['odd', 'even'], loop.index) }}">
+                    <div>
+                        <code><a href=" {{ path('_filth_redis_browser_show', { 'key' : key, 'clientid' : clientid } ) }}">{{ key }}</a></code>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% set clientid = clientid + 1 %}
+    {% endfor %}
+
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css" type="text/css" />
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $( "#tabs" ).tabs();
+    });
+</script>
