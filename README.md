@@ -104,7 +104,7 @@ Alias is the name of the service, where the Redis client is avaible. The bundle 
 We are done! Open /redis url in your browser and enjoy.
 
 
-- [Overriding Templates](overriding_templates.md)
+- [Overriding Templates](Docs/overriding_templates.md)
 
 
 
