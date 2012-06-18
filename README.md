@@ -3,7 +3,7 @@ RedisBrowserBundle
 
 Symfony2 - Browser for the Redis key-value storage.
 
-
+![Screen 1](Docs/redis.jpg) ![Screen 2](Docs/redis2.jpg)
 
 Installation
 ============
