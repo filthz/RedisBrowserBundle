@@ -101,6 +101,8 @@ filth_redis_browser:
 
 Alias is the name of the service, where the Redis client is avaible. The bundle will make a call to this service and work with the client from that.
 
+We are done! Open /redis url in your browser and enjoy.
+
 
 Overriding Default Templates
 ============================
