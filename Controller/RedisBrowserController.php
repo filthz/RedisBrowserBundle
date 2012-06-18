@@ -1,12 +1,5 @@
 <?php
 
-/*
- * This file is part of the FOSUserBundle package.
- *
- * (c) FriendsOfSymfony <http://friendsofsymfony.github.com/>
- *
- */
-
 namespace Filth\RedisBrowserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -73,7 +66,7 @@ class RedisBrowserController extends Controller
     }
 
     /**
-     *
+     * Index Controller
      */
     public function indexAction()
     {
@@ -87,7 +80,13 @@ class RedisBrowserController extends Controller
         );
     }
 
-
+    /**
+     * Detail Controller
+     *
+     * @param $key
+     * @param $clientid
+     * @return \Symfony\Bundle\FrameworkBundle\Controller\Response
+     */
     public function showAction($key, $clientid)
     {
         $clients = $this->getClients();
