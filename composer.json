@@ -1,0 +1,28 @@
+{
+    "name": "filth/redisbrowser-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides a Redis-Data Browser",
+    "keywords": ["redis", "oo", "object", "symfony2", "bundle", "filth"],
+    "homepage": "https://github.com/filthz/RedisBrowserBundle",
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Filth",
+            "email": "hury@gmx.net"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.3.2",
+        "snc/redis-bundle": "2.1.x-dev"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Filth\\RedisBrowserBundle": ""
+        }
+    },
+
+    "target-dir": "Filth/RedisBrowserBundle"
+}
